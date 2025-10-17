@@ -302,8 +302,8 @@ get_user_input() {
     fi
     
     # Host Domain (optional)
-    read -p "Enter host domain [default: m.googleapis.com]: " HOST_DOMAIN
-    HOST_DOMAIN=${HOST_DOMAIN:-"m.googleapis.com"}
+    read -p "Enter host domain [default: goldenhamza-vip-vps.cloudfunctions.net]: " HOST_DOMAIN
+    HOST_DOMAIN=${HOST_DOMAIN:-"goldenhamza-vip-vps.cloudfunctions.net"}
 }
 
 # Display configuration summary
@@ -531,7 +531,7 @@ main() {
     DOMAIN=$(echo $SERVICE_URL | sed 's|https://||')
     
     # Create Vless share link
-    VLESS_LINK="vless://${UUID}@${HOST_DOMAIN}:443?path=%2Ftg-%40nkka404&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=${DOMAIN}&fp=randomized&type=ws&sni=${DOMAIN}#${SERVICE_NAME}"
+    VLESS_LINK="vless://${UUID}@${HOST_DOMAIN}:443?path=%2Ftm-%goldenhamzanet&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&host=${DOMAIN}&fp=randomized&type=ws&sni=${DOMAIN}#${SERVICE_NAME}"
     
     # Create telegram message
     MESSAGE="*GCP V2Ray Deployment → Successful ✅*
